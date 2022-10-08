@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github]()
-- Live Site URL: [vercel]()
+- Solution URL: [github](https://p-vivek.github.io/Interactive-card-details-form/)
+- Live Site URL: (https://p-vivek.github.io/Interactive-card-details-form/)
 
 ## My process
 
