@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-mobile.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="section-left">
+        <div class="card-front">
+          <div class="content">
+            <img src="./images/card-logo.svg" alt="image logo" />
+            <h1 class="num">0000 0000 0000 0000</h1>
+            <h2 class="identity">
+              Vivek Patel <span class="identity-right">00/00</span>
+            </h2>
+          </div>
+        </div>
+        <div class="card-back">
+          <h2 class="identity-back">000</h2>
+        </div>
+      </section>
+      <section class="section-right">
+        <form class="appear" onsubmit="event.preventDefault(); validate();">
+          <div class="form-group">
+            <label for="name">Cardholder Name</label>
+            <input
+              type="text"
+              class="plain"
+              id="name"
+              name="name"
+              placeholder="e.g. Vivek Patel"
+              value=""
+            />
+            <div
+              class="formData"
+              data-error="Name cannot be empty"
+              data-error-visible="false"
+            ></div>
+          </div>
+          <div class="form-group">
+            <label for="card">Card Number</label>
+            <input
+              class="plain"
+              type="text"
+              id="card"
+              name="card"
+              placeholder="e.g. 1234 5678 9123 0000"
+              value=""
+            />
+            <div
+              class="formData"
+              data-error="Wrong format, numbers only"
+              data-error-visible="false"
+            ></div>
+          </div>
+          <div class="form-group others">
+            <div class="col medium">
+              <label for="expire">Exp. Date (MM/YY)</label>
+              <div class="join-field">
+                <input
+                  class="short"
+                  type="text"
+                  id="expire"
+                  name="expire-month"
+                  placeholder="MM"
+                  value=""
+                />
+                <div
+                  class="formData"
+                  data-error=""
+                  data-error-visible="false"
+                ></div>
+                <input
+                  class="short"
+                  type="text"
+                  name="expire-year"
+                  placeholder="YY"
+                  value=""
+                />
+              </div>
+              <div
+                class="formData"
+                data-error="Can't be blank"
+                data-error-visible="false"
+              ></div>
+            </div>
+            <div class="col large">
+              <label for="cvc">CVC</label>
+              <input
+                class="medi"
+                type="text"
+                id="cvc"
+                name="cvc"
+                placeholder="e.g. 123"
+                value=""
+              />
+              <div
+                class="formData"
+                data-error="Can't be blank"
+                data-error-visible="false"
+              ></div>
+            </div>
+          </div>
+          <button class="button">Confirm</button>
+        </form>
+        <div class="modale disappear">
+          <img
+            class="complete"
+            src="./images/icon-complete.svg"
+            alt="logo complete"
+          />
+          <h1 class="thank">THANK YOU!</h1>
+          <p class="details">We've added your card details</p>
+          <button class="continue">Continue</button>
+        </div>
+      </section>
+    </main>
+    <script src="interactive.js"></script>
+  </body>
+</html>
